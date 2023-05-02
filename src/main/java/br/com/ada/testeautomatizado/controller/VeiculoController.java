@@ -4,10 +4,10 @@ package br.com.ada.testeautomatizado.controller;
 import br.com.ada.testeautomatizado.dto.VeiculoDTO;
 import br.com.ada.testeautomatizado.service.VeiculoService;
 import br.com.ada.testeautomatizado.util.Response;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -19,25 +19,26 @@ public class VeiculoController {
     @Autowired
     private VeiculoService veiculoService;
 
-
-    @GetMapping("/todos")
+    @GetMapping("todos")
     public ResponseEntity<Response<List<VeiculoDTO>>> listarTodos(){
         return this.veiculoService.listarTodos();
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public ResponseEntity<Response<VeiculoDTO>> cadastrar(@RequestBody VeiculoDTO veiculoDTO) {
         return this.veiculoService.cadastrar(veiculoDTO);
     }
 
-    @DeleteMapping("/{placa}")
+    @DeleteMapping("{placa}")
     public ResponseEntity<Response<Boolean>> deletarVeiculoPelaPlaca(@PathVariable("placa") String placa) {
         return this.veiculoService.deletarVeiculoPelaPlaca(placa);
     }
 
-    @PutMapping("/")
+    @PutMapping()
     public ResponseEntity<Response<VeiculoDTO>> atualizar(@RequestBody VeiculoDTO veiculoDTO) {
         return this.veiculoService.atualizar(veiculoDTO);
     }
 
 }
+
+

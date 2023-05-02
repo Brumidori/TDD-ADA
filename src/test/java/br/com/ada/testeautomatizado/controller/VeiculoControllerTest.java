@@ -92,7 +92,7 @@ class VeiculoControllerTest {
                 .andDo(print())
                 .andReturn();
 
-        String responseExpected = mapper.writeValueAsString(new Response<VeiculoDTO>("CPF inválido!", null));
+        String responseExpected = mapper.writeValueAsString(new Response<VeiculoDTO>("Placa invalida!", null));
 
         Assertions.assertEquals(responseExpected, mvcResult.getResponse().getContentAsString());
 
@@ -186,6 +186,7 @@ class VeiculoControllerTest {
 
     private static VeiculoDTO veiculoDTO(){
         VeiculoDTO veiculoDTO = new VeiculoDTO();
+        veiculoDTO.setId(1L);
         veiculoDTO.setPlaca("XYZ-4578");
         veiculoDTO.setModelo("F40");
         veiculoDTO.setMarca("FERRARI");
@@ -196,6 +197,7 @@ class VeiculoControllerTest {
 
     private static VeiculoDTO veiculoAtualizadoDTO(){
         VeiculoDTO veiculoDTO = new VeiculoDTO();
+        veiculoDTO.setId(1L);
         veiculoDTO.setPlaca("XYZ-4578");
         veiculoDTO.setModelo("F40");
         veiculoDTO.setMarca("FERRARI");

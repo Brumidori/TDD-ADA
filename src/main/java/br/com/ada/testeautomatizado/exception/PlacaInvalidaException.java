@@ -2,8 +2,8 @@ package br.com.ada.testeautomatizado.exception;
 
 public class PlacaInvalidaException extends RuntimeException {
 
-    public PlacaInvalidaException(){
-        super("Placa inválida!");
+    public PlacaInvalidaException(String s){
+        super("Placa invalida!");
     }
 
 }
