@@ -1,7 +1,7 @@
-### Projeto
+### Projeto - Requisitos
 
 
-1. Crie um CRUD com a entidade **Veiculo.class**, aplicando a técnica do TDD (Test Driven Development) com base nos testes disponibilizados.
+1. Criar um CRUD com a entidade **Veiculo.class**, aplicando a técnica do TDD (Test Driven Development) com base nos testes disponibilizados.
 
 #### Requisitos Não-Funcionais
 
